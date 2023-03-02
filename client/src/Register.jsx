@@ -1,13 +1,21 @@
+import { useState } from "react";
+
 export default function Register() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="bg-blue-50 h-screen flex items-center">
       <form className="w-64 mx-auto">
         <input 
+          value={username}
+          onChange={evt => setUsername(evt.target.value)}
           type="text" 
           placeholder="username" 
           className="block w-full rounded-sm p-2 mb-2 border" 
         />
         <input 
+          value={password}
+          onChange={evt => setPassword(evt.target.value)}
           type="password" 
           placeholder="password" 
           className="block w-full rounded-sm p-2 mb-2 border" 
